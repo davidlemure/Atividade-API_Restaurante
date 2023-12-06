@@ -1,5 +1,6 @@
 using ApiRestaurante.Models;
 using Microsoft.AspNetCore.Mvc;
+using Atividade_API_Restaurante.Models.Enuns;
 
 namespace ApiRestaurante.Controllers
 {
@@ -8,39 +9,39 @@ namespace ApiRestaurante.Controllers
     
     public class RestaurantesController : ControllerBase 
     {
-        private static List<Restaurante> restaurantes = new List<Restaurante>()
+        private static List<Restaurante> restaurante = new List<Restaurante>()
     
         {
-        new Restaurante() { Id = 1, Nome = "Ari do caldo", Telefone = 999999999, Endereco = "Bernardo Fonseca 446", Nota = 9},
-        new Restaurante() { Id = 2, Nome = "Ari do suco", Telefone = 999999999, Endereco = "Bernardo Fonseca 446", Nota = 5},
+        new Restaurante() { Id = 1, Nome = "Ari do caldo", Telefone = 999999999, Endereco = "Bernardo Fonseca 446", Nota = 9, Tipo=TipoRestauranteEnum.Caseira},
+        new Restaurante() { Id = 2, Nome = "Ari do suco", Telefone = 999999999, Endereco = "Bernardo Fonseca 446", Nota = 5, Tipo=TipoRestauranteEnum.Italiana},
 
         };
 
         [HttpGet("Get")]
         public IActionResult GetFirst()
         {
-            Restaurante p = restaurantes[0];
+            Restaurante p = restaurante[0];
             return Ok(p);
         }
 
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            return Ok(restaurantes);
+            return Ok(restaurante);
         }
 
         [HttpPost]
         public IActionResult AddRestaurante(Restaurante novoRestaurante)
         {
-            restaurantes.Add(novoRestaurante);
-            return Ok(restaurantes);
+            restaurante.Add(novoRestaurante);
+            return Ok(restaurante);
         }
 
         [HttpGet("GetOrdenado")]
 
         public IActionResult GetOrdem()
         {
-            List<Restaurante> listaFinal = restaurantes.OrderBy(p => p.Nota).ToList();
+            List<Restaurante> listaFinal = restaurante.OrderBy(p => p.Nota).ToList();
             return Ok(listaFinal);
         }        
 
@@ -48,7 +49,7 @@ namespace ApiRestaurante.Controllers
 
         public IActionResult Get(int nota)
         {
-            List<Restaurante> listaFinal = restaurantes.FindAll(p => p.Nota == nota);
+            List<Restaurante> listaFinal = restaurante.FindAll(p => p.Nota == nota);
             return Ok(listaFinal);
         }    
 
@@ -56,14 +57,25 @@ namespace ApiRestaurante.Controllers
 
         public IActionResult UpdateRestaurantes(Restaurante p)
         {
-            Restaurante restaurantesAlterado = restaurantes.Find(rest => rest.Id == p.Id);
-            restaurantesAlterado = p.Nome;
-            restaurantesAlterado = p.Telefone;
-            restaurantesAlterado = p.Endereco;
-            restaurantesAlterado = p.Nota;
+            Restaurante restauranteAlterado = restaurante.Find(rest => rest.Id == p.Id);
+            restauranteAlterado.Nome = p.Nome;
+            restauranteAlterado.Telefone = p.Telefone;
+            restauranteAlterado.Endereco = p.Endereco;
+            restauranteAlterado.Nota = p.Nota;
 
-            return Ok(restaurantes);
+            return Ok(restaurante);
         }    
+
+        [HttpGet("GetByEnum/{enumId}")]
+
+        public IActionResult GetByEnum(int enumId)
+        {
+            TipoRestauranteEnum enumDigitado = (TipoRestauranteEnum)enumId;
+
+            List<Restaurante> listaBusca = restaurante.FindAll(p => p.Tipo == enumDigitado);
+
+            return Ok (listaBusca);
+        }
     }
 
     

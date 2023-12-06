@@ -469,24 +469,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\etechas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\David\\ETEC\\2DS\\DS\\ApiRestaurante\\ApiRestaurante.csproj",
+      "projectUniqueName": "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj",
       "projectName": "ApiRestaurante",
-      "projectPath": "C:\\Users\\User\\Desktop\\David\\ETEC\\2DS\\DS\\ApiRestaurante\\ApiRestaurante.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\David\\ETEC\\2DS\\DS\\ApiRestaurante\\obj\\",
+      "projectPath": "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj",
+      "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
+      "outputPath": "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -533,7 +541,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

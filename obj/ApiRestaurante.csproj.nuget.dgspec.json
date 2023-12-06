@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj": {}
+    "D:\\David\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj": {}
   },
   "projects": {
-    "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj": {
+    "D:\\David\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj",
+        "projectUniqueName": "D:\\David\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj",
         "projectName": "ApiRestaurante",
-        "projectPath": "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj",
+        "projectPath": "D:\\David\\ApiRestaurante\\Atividade-API_Restaurante\\ApiRestaurante.csproj",
         "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\David\\DS\\ApiRestaurante\\Atividade-API_Restaurante\\obj\\",
+        "outputPath": "D:\\David\\ApiRestaurante\\Atividade-API_Restaurante\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,6 +48,14 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

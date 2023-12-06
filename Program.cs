@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Atividade_API_Restaurante.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

@@ -7,6 +7,7 @@ namespace Atividade_API_Restaurante.Models.Enuns
         Japonesa = 2,
         Italiana = 3,
         Arabe = 4,
-        Saudavel = 5
+        Saudavel = 5,
+        Lanches = 6
     }
 }
